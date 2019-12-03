@@ -1,6 +1,3 @@
-# how to run:
-# docker run -d  --name yt -v c:\temp:/video youtube-dl
-
 FROM alpine:3.10
 
 RUN apk add --no-cache python
