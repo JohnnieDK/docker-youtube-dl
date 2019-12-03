@@ -6,7 +6,7 @@ And download the file to your drive that is mapped (in thise case on windows c:\
 
 **Start container:**
 ~~~bash
-docker run -d --name yt -v c:\temp:/video youtube-dl
+docker run -d --name yt -v c:\temp:/video bladedk/youtube-dl
 ~~~
 
 **Enter container:**
