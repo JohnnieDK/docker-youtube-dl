@@ -26,4 +26,4 @@ You can download the container on [dockerhub](https://hub.docker.com/r/bladedk/y
 
 [youtube-dl](https://yt-dl.org)
 
-vers: youtube-dl 2020.03.08
+vers: youtube-dl 2020.03.24
