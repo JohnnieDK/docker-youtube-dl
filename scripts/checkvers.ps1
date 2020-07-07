@@ -16,6 +16,7 @@ $json     = ($response.Content | ConvertFrom-Json)[0]
 $history = Get-Content $fileHistory | ConvertFrom-Json
 
 if ($json.created_at -le $history.created_at) { 
+    Write-Host "No new version found. Bailing out."
     return  # same version, do nothing
 }
 Write-Host "*** Newer version found ***" -BackgroundColor Cyan -ForegroundColor Black
