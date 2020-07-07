@@ -1,0 +1,24 @@
+name: Check for new version
+on:
+    push:
+      branches:
+      - "master"
+    schedule:
+      - cron: '* 07 * * *'
+jobs:
+  check-for-new-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Check for new version ps1
+        shell: pwsh
+        run: ./scripts/checkvers.ps1
+      - name: Push to github
+        continue-on-error: true
+        run: |
+          git config --global user.name 'Pipeline'
+          git config --global user.email '46320367+JohnnieDK@users.noreply.github.com'
+          git remote set-url origin https://JohnnieDK:${{ secrets.GITHUB_TOKEN }}@github.com/JohnnieDK/docker-youtube-dl.git
+          git status
+          git commit -am 'Pipeline: youtube-dl have been updated, update readme and force new docker build.'
+          git push origin HEAD:pipeline
