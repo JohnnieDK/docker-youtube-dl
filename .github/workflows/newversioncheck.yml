@@ -21,4 +21,4 @@ jobs:
           git remote set-url origin https://JohnnieDK:${{ secrets.GITHUB_TOKEN }}@github.com/JohnnieDK/docker-youtube-dl.git
           git status
           git commit -am 'Pipeline: youtube-dl have been updated, update readme and force new docker build.'
-          git push origin HEAD:pipeline
+          git push origin HEAD:master
