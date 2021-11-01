@@ -1,3 +1,5 @@
+**This is no longer being updated, after dockerhub removed its free automatic builds**
+
 This container was created to keep running in the background.  
 Remote into it, and download the video you specify.  
 Youtube-dl will then choose the best mp4 it can find and merge it with the best audio (usually up to 1080p).  
